@@ -1,0 +1,159 @@
+/*start variables */
+:root {
+    /* main colors */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Active-button: hsl(158, 92%, 10%);
+    /* secondary colors */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --border-radius: 12px;
+    --text-padding: 20px;
+}
+
+/* end variables */
+/* start parents */
+.top-parent {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-parent .parent {
+    width: calc(100% - 20px);
+}
+
+.top-parent .parent .image-div {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.top-parent .parent .image {
+    content: url(../images/image-product-mobile.jpg);
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+@media (min-width:576px) {
+    .top-parent .parent .image {
+        content: url(../images/image-product-desktop.jpg);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--border-radius);
+        min-height: 100%;
+    }
+}
+
+/* end parents */
+/* start text section */
+.top-parent .parent .text {
+    padding-top: 30px;
+    background-color: white;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding-left: var(--text-padding);
+    padding-right: var(--text-padding);
+    padding-bottom: 16px;
+}
+
+@media (min-width:576px) {
+    .top-parent .parent .text {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+}
+
+.top-parent .parent .text .perfume-text {
+    font-family: "Montserrat";
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--Dark-grayish-blue);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.top-parent .parent .text .perfume-title {
+    color: black;
+    font-family: "Fraunces";
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 32px;
+}
+
+.top-parent .parent .text .perfume-paragraph {
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    margin-top: 15px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.top-parent .parent .text .prices {
+    display: flex;
+}
+
+.top-parent .parent .text .prices .new-price {
+    color: var(--Dark-cyan);
+    font-family: "Fraunces";
+    font-size: 37px;
+}
+
+.top-parent .parent .text .prices .old-price {
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-family: "Montserrat";
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin-left: 18px;
+}
+
+.top-parent .parent .text button {
+    width: 100%;
+    background-color: var(--Dark-cyan);
+    color: white;
+    font-family: "Montserrat";
+    border: 0;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-top: 12px;
+    max-width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.top-parent .parent .text button:active {
+    background-color: var(--Active-button);
+}
+.top-parent .parent .text button img {
+    margin-right: 11px;
+}
+
+/* end text section */
+/* start attribution */
+.attribution {
+    margin-top: 14px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* end attribution */
