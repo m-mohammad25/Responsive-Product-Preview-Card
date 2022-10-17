@@ -25,7 +25,8 @@
 }
 
 .top-parent .parent {
-    width: calc(100% - 20px);
+    /*width: calc(100% - 20px);*/
+    max-width: 611px;
 }
 
 .top-parent .parent .image-div {
