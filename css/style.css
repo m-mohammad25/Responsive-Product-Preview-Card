@@ -1,4 +1,4 @@
-/*start variables */
+/*start variables and global rules */
 :root {
     /* main colors */
     --Dark-cyan: hsl(158, 36%, 37%);
@@ -10,9 +10,15 @@
     --White: hsl(0, 0%, 100%);
 
     --border-radius: 12px;
-    --text-padding: 20px;
+    --text-padding: 24px;
 }
-
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
 /* end variables */
 /* start parents */
 .top-parent {
@@ -43,6 +49,12 @@
     margin-right: auto;
     padding: 0;
 }
+@media (min-width:576px) {
+    .top-parent .parent .image-div {
+        width: 50%;
+    }
+}
+
 
 .top-parent .parent .image {
     content: url(../images/image-product-mobile.jpg);
@@ -78,6 +90,7 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: var(--border-radius);
         border-top-right-radius: var(--border-radius);
+        width: 50%;
     }
 }
 
